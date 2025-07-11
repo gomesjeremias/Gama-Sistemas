@@ -1,0 +1,38 @@
+.page-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-link.active {
+    background-color: hsl(var(--p));
+    color: hsl(var(--pc));
+}
+
+.bg-base-200 {
+
+    background-color: oklch(0.5 0.14 324.23);
+}
+
+.bg-base-100 {
+    background-color: oklch(0.56 0.12 318.44);
+}
+
+.text-4x1 {
+        color: #ffff;
+        font-size: ;
+}
+
+.btn-primary {
+
+    border-color: oklch(0.46 0.14 292.6);
+    background-color: oklch(0.46 0.14 292.6);
+    color: #ffff;
+}
+
+.btn-ghost {
+    color: #ffff;
+}
