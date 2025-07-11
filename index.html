@@ -1,4 +1,5 @@
 <html lang="pt-BR" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="bg-base-200">
+    <div class="logo-image">
+        <div class="logo">
+        <img src="./logo gama.png">
+        </div>
+    </div>
 
     <div id="app" class="h-screen w-screen">
         <!-- Tela de Login -->
@@ -22,11 +31,13 @@
                     <form id="login-form">
                         <div class="form-control">
                             <label class="label"><span class="label-text">Usuário</span></label>
-                            <input type="text" id="username" placeholder="admin" class="input input-bordered" required value="" />
+                            <input type="text" id="username" placeholder="admin" class="input input-bordered" required
+                                value="" />
                         </div>
                         <div class="form-control">
                             <label class="label"><span class="label-text">Senha</span></label>
-                            <input type="password" id="password" placeholder="digite sua senha" class="input input-bordered" required value="" />
+                            <input type="password" id="password" placeholder="digite sua senha"
+                                class="input input-bordered" required value="" />
                         </div>
                         <div class="form-control mt-6">
                             <button type="submit" class="btn btn-primary">Entrar</button>
@@ -37,20 +48,22 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Tela de Cadastro -->
         <div id="signup-page" class="hidden flex items-center justify-center h-full">
-             <div class="card w-96 bg-base-100 shadow-xl">
+            <div class="card w-96 bg-base-100 shadow-xl">
                 <div class="card-body">
                     <h2 class="card-title text-2xl justify-center mb-4">Cadastro</h2>
                     <form id="signup-form">
                         <div class="form-control">
                             <label class="label"><span class="label-text">Usuário</span></label>
-                            <input type="text" id="signup-username" placeholder="novo.usuario" class="input input-bordered" required />
+                            <input type="text" id="signup-username" placeholder="novo.usuario"
+                                class="input input-bordered" required />
                         </div>
                         <div class="form-control">
                             <label class="label"><span class="label-text">Senha</span></label>
-                            <input type="password" id="signup-password" placeholder="••••••••" class="input input-bordered" required />
+                            <input type="password" id="signup-password" placeholder="••••••••"
+                                class="input input-bordered" required />
                         </div>
                         <div class="form-control mt-6">
                             <button type="submit" class="btn btn-primary">Criar Conta</button>
@@ -68,20 +81,24 @@
             <aside class="w-64 bg-base-100 shadow-md flex flex-col">
                 <div class="p-4 text-xl font-bold border-b">SalesApp</div>
                 <ul class="menu p-4 flex-1">
-                    <li><a href="#dashboard" class="nav-link active"><i class="fa-solid fa-chart-pie w-4"></i> Dashboard</a></li>
+                    <li><a href="#dashboard" class="nav-link active"><i class="fa-solid fa-chart-pie w-4"></i>
+                            Dashboard</a></li>
                     <li><a href="#clientes" class="nav-link"><i class="fa-solid fa-users w-4"></i> Clientes</a></li>
-                    <li><a href="#produtos" class="nav-link"><i class="fa-solid fa-box-archive w-4"></i> Produtos</a></li>
-                    <li><a href="#fornecedores" class="nav-link"><i class="fa-solid fa-truck-fast w-4"></i> Fornecedores</a></li>
+                    <li><a href="#produtos" class="nav-link"><i class="fa-solid fa-box-archive w-4"></i> Produtos</a>
+                    </li>
+                    <li><a href="#fornecedores" class="nav-link"><i class="fa-solid fa-truck-fast w-4"></i>
+                            Fornecedores</a></li>
                     <li><a href="#vendas" class="nav-link"><i class="fa-solid fa-dollar-sign w-4"></i> Vendas</a></li>
                 </ul>
                 <div class="p-4 border-t">
-                     <button id="logout-btn" class="btn btn-ghost btn-block justify-start"><i class="fa-solid fa-right-from-bracket w-4"></i> Sair</button>
+                    <button id="logout-btn" class="btn btn-ghost btn-block justify-start"><i
+                            class="fa-solid fa-right-from-bracket w-4"></i> Sair</button>
                 </div>
             </aside>
 
             <!-- Main Content -->
             <main class="flex-1 p-6 overflow-y-auto">
-                
+
                 <!-- Dashboard Section -->
                 <section id="dashboard" class="page-section">
                     <h1 class="text-3xl font-bold mb-6">Dashboard</h1>
@@ -112,13 +129,16 @@
                                 <canvas id="vendas-produto-chart"></canvas>
                             </div>
                         </div>
-                         <div class="card bg-base-100 shadow-lg">
+                        <div class="card bg-base-100 shadow-lg">
                             <div class="card-body">
                                 <h2 class="card-title mb-4">Clientes com Contas a Pagar</h2>
                                 <div class="overflow-x-auto">
                                     <table class="table" id="clientes-a-pagar-table">
                                         <thead>
-                                            <tr><th>Nome</th><th>Telefone</th></tr>
+                                            <tr>
+                                                <th>Nome</th>
+                                                <th>Telefone</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <!-- Preenchido por JS -->
@@ -129,16 +149,17 @@
                         </div>
                     </div>
                 </section>
-                
+
                 <!-- Clientes Section -->
                 <section id="clientes" class="page-section hidden">
                     <div class="flex justify-between items-center mb-6">
                         <h1 class="text-3xl font-bold">Clientes</h1>
-                        <button class="btn btn-primary" onclick="client_modal.showModal()"><i class="fa-solid fa-plus"></i> Novo Cliente</button>
+                        <button class="btn btn-primary" onclick="client_modal.showModal()"><i
+                                class="fa-solid fa-plus"></i> Novo Cliente</button>
                     </div>
                     <div class="card bg-base-100 shadow-lg">
                         <div class="card-body">
-                             <div class="overflow-x-auto">
+                            <div class="overflow-x-auto">
                                 <table class="table table-zebra">
                                     <thead>
                                         <tr>
@@ -159,20 +180,23 @@
                 </section>
 
                 <!-- Outras seções serão adicionadas aqui -->
-                 <section id="produtos" class="page-section hidden">Produtos</section>
-                 <section id="fornecedores" class="page-section hidden">Fornecedores</section>
-                 <section id="vendas" class="page-section hidden">
+                <section id="produtos" class="page-section hidden">Produtos</section>
+                <section id="fornecedores" class="page-section hidden">Fornecedores</section>
+                <section id="vendas" class="page-section hidden">
                     <div class="flex justify-between items-center mb-6">
                         <h1 class="text-3xl font-bold">Vendas</h1>
                         <div class="flex items-center gap-2">
-                             <button class="btn btn-primary" onclick="sale_modal.showModal()"><i class="fa-solid fa-plus"></i> Nova Venda</button>
-                             <button class="btn btn-secondary" id="download-sales-pdf"><i class="fa-solid fa-download"></i> Baixar Relatório</button>
-                             <button class="btn btn-error btn-outline" id="clear-sales-btn"><i class="fa-solid fa-trash-can"></i> Limpar Vendas</button>
+                            <button class="btn btn-primary" onclick="sale_modal.showModal()"><i
+                                    class="fa-solid fa-plus"></i> Nova Venda</button>
+                            <button class="btn btn-secondary" id="download-sales-pdf"><i
+                                    class="fa-solid fa-download"></i> Baixar Relatório</button>
+                            <button class="btn btn-error btn-outline" id="clear-sales-btn"><i
+                                    class="fa-solid fa-trash-can"></i> Limpar Vendas</button>
                         </div>
                     </div>
                     <div class="card bg-base-100 shadow-lg">
                         <div class="card-body">
-                             <div class="overflow-x-auto">
+                            <div class="overflow-x-auto">
                                 <table class="table table-zebra">
                                     <thead>
                                         <tr>
@@ -193,96 +217,98 @@
                             </div>
                         </div>
                     </div>
-                 </section>
+                </section>
             </main>
         </div>
     </div>
-    
+
     <!-- Modal Cliente -->
     <dialog id="client_modal" class="modal">
-      <div class="modal-box">
-        <h3 class="font-bold text-lg" id="client-modal-title">Novo Cliente</h3>
-        <form id="client-form" class="py-4 space-y-4">
-            <input type="hidden" id="client-id">
-            <div class="form-control">
-                <label class="label"><span class="label-text">Nome</span></label>
-                <input type="text" id="client-name" placeholder="Nome completo" class="input input-bordered" required>
-            </div>
-            <div class="form-control">
-                <label class="label"><span class="label-text">E-mail</span></label>
-                <input type="email" id="client-email" placeholder="email@exemplo.com" class="input input-bordered" required>
-            </div>
-             <div class="form-control">
-                <label class="label"><span class="label-text">Telefone</span></label>
-                <input type="tel" id="client-phone" placeholder="(99) 99999-9999" class="input input-bordered">
-            </div>
-            <div class="form-control">
-                <label class="label"><span class="label-text">Status da Conta</span></label>
-                <select id="client-status" class="select select-bordered" required>
-                    <option value="Pago">Pago</option>
-                    <option value="A pagar">A pagar</option>
-                </select>
-            </div>
-        </form>
-        <div class="modal-action">
-          <form method="dialog">
-            <button class="btn btn-ghost">Fechar</button>
-          </form>
-          <button class="btn btn-primary" id="save-client-btn">Salvar</button>
-        </div>
-      </div>
-    </dialog>
-
-    <!-- Modal Venda -->
-    <dialog id="sale_modal" class="modal">
-      <div class="modal-box">
-        <h3 class="font-bold text-lg" id="sale-modal-title">Nova Venda</h3>
-        <form id="sale-form" class="py-4 space-y-4">
-            <input type="hidden" id="sale-id">
-            <div class="form-control">
-                <label class="label"><span class="label-text">Cliente</span></label>
-                <select id="sale-client" class="select select-bordered" required></select>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg" id="client-modal-title">Novo Cliente</h3>
+            <form id="client-form" class="py-4 space-y-4">
+                <input type="hidden" id="client-id">
                 <div class="form-control">
-                    <label class="label"><span class="label-text">Produto</span></label>
-                    <select id="sale-product" class="select select-bordered" required></select>
-                </div>
-                 <div class="form-control">
-                    <label class="label"><span class="label-text">Quantidade</span></label>
-                    <input type="number" id="sale-quantity" value="1" min="1" class="input input-bordered" required>
-                </div>
-            </div>
-             <div class="form-control">
-                <label class="label"><span class="label-text">Valor Total</span></label>
-                <input type="text" id="sale-total" placeholder="R$ 0,00" class="input input-bordered" readonly>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="form-control">
-                    <label class="label"><span class="label-text">Forma de Pagamento</span></label>
-                    <select id="sale-payment" class="select select-bordered" required>
-                        <option>Cartão de Crédito</option>
-                        <option>Boleto</option>
-                        <option>PIX</option>
-                        <option>Dinheiro</option>
-                    </select>
+                    <label class="label"><span class="label-text">Nome</span></label>
+                    <input type="text" id="client-name" placeholder="Nome completo" class="input input-bordered"
+                        required>
                 </div>
                 <div class="form-control">
-                    <label class="label"><span class="label-text">Status da Venda</span></label>
-                    <select id="sale-status" class="select select-bordered" required>
+                    <label class="label"><span class="label-text">E-mail</span></label>
+                    <input type="email" id="client-email" placeholder="email@exemplo.com" class="input input-bordered"
+                        required>
+                </div>
+                <div class="form-control">
+                    <label class="label"><span class="label-text">Telefone</span></label>
+                    <input type="tel" id="client-phone" placeholder="(99) 99999-9999" class="input input-bordered">
+                </div>
+                <div class="form-control">
+                    <label class="label"><span class="label-text">Status da Conta</span></label>
+                    <select id="client-status" class="select select-bordered" required>
                         <option value="Pago">Pago</option>
                         <option value="A pagar">A pagar</option>
                     </select>
                 </div>
+            </form>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn btn-ghost">Fechar</button>
+                </form>
+                <button class="btn btn-primary" id="save-client-btn">Salvar</button>
             </div>
-        </form>
-        <div class="modal-action">
-          <form method="dialog">
-            <button class="btn btn-ghost" id="close-sale-modal-btn">Fechar</button>
-          </form>
-          <button class="btn btn-primary" id="save-sale-btn">Salvar</button>
         </div>
-      </div>
+    </dialog>
+
+    <!-- Modal Venda -->
+    <dialog id="sale_modal" class="modal">
+        <div class="modal-box">
+            <h3 class="font-bold text-lg" id="sale-modal-title">Nova Venda</h3>
+            <form id="sale-form" class="py-4 space-y-4">
+                <input type="hidden" id="sale-id">
+                <div class="form-control">
+                    <label class="label"><span class="label-text">Cliente</span></label>
+                    <select id="sale-client" class="select select-bordered" required></select>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Produto</span></label>
+                        <select id="sale-product" class="select select-bordered" required></select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Quantidade</span></label>
+                        <input type="number" id="sale-quantity" value="1" min="1" class="input input-bordered" required>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label class="label"><span class="label-text">Valor Total</span></label>
+                    <input type="text" id="sale-total" placeholder="R$ 0,00" class="input input-bordered" readonly>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Forma de Pagamento</span></label>
+                        <select id="sale-payment" class="select select-bordered" required>
+                            <option>Cartão de Crédito</option>
+                            <option>Boleto</option>
+                            <option>PIX</option>
+                            <option>Dinheiro</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Status da Venda</span></label>
+                        <select id="sale-status" class="select select-bordered" required>
+                            <option value="Pago">Pago</option>
+                            <option value="A pagar">A pagar</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn btn-ghost" id="close-sale-modal-btn">Fechar</button>
+                </form>
+                <button class="btn btn-primary" id="save-sale-btn">Salvar</button>
+            </div>
+        </div>
     </dialog>
 
 
@@ -290,4 +316,5 @@
     <script src="auth.js" type="module"></script>
     <script src="app.js" type="module"></script>
 </body>
+
 </html>
